@@ -1,6 +1,7 @@
-import { Image } from 'react-datocms'
-import cn from 'classnames'
-import Link from 'next/link'
+import React from 'react';
+import { Image } from 'react-datocms';
+import cn from 'classnames';
+import Link from 'next/link';
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
@@ -13,7 +14,8 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}
     />
-  )
+  );
+
   return (
     <div className="-mx-5 sm:mx-0">
       {slug ? (
@@ -24,5 +26,5 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         image
       )}
     </div>
-  )
+  );
 }
