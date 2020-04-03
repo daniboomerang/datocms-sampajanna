@@ -10,14 +10,14 @@ const Intro = () => (
       A statically generated blog example using
       <a
         href="https://nextjs.org/"
-        className="underline hover:text-success duration-200 transition-colors"
+        className="text-accent hover:text-accent-soft duration-200 transition-colors"
       >
         Next.js
       </a>
       and
       <a
         href={CMS_URL}
-        className="underline hover:text-success duration-200 transition-colors"
+        className="text-accent hover:text-accent-soft duration-200 transition-colors"
       >
         {CMS_NAME}
       </a>
