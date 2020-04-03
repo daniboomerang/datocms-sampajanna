@@ -8,6 +8,10 @@
     "lint": "eslint components lib pages -c .eslintrc.json"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@zeit/next-css": "^1.0.1",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "isomorphic-unfetch": "3.0.0",
@@ -16,7 +20,8 @@
     "react-datocms": "1.1.0",
     "react-dom": "^16.13.0",
     "remark": "11.0.2",
-    "remark-html": "10.0.0"
+    "remark-html": "10.0.0",
+    "use-dark-mode": "2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

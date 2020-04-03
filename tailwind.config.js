@@ -1,32 +1,50 @@
 module.exports = {
   theme: {
-    extend: {
-      colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
-      },
-      spacing: {
-        28: '7rem',
-      },
-      letterSpacing: {
-        tighter: '-.04em',
-      },
-      lineHeight: {
-        tight: 1.2,
-      },
-      fontSize: {
-        '5xl': '2.5rem',
-        '6xl': '2.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6.25rem',
-      },
-      boxShadow: {
-        small: '0 5px 10px rgba(0, 0, 0, 0.12)',
-        medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
-      },
+    colors: {},
+    textColor: {
+      primary: 'var(--color-text-primary)',
+      secondary: 'var(--color-text-secondary)',
+      content: 'var(--color-text-content)',
+      contrast: 'var(--color-text-contrast)',
+      solid: 'var(--color-text-solid)',
+      'gradient-from': 'var(--color-text-gradient-from)',
+      'gradient-to': 'var(--color-text-gradient-to)',
+      accent: 'var(--color-text-accent)',
+      'accent-soft': 'var(--color-text-accent-soft)',
     },
+    backgroundColor: {
+      bg: 'var(--color-bg-bg)',
+      primary: 'var(--color-bg-primary)',
+      secondary: 'var(--color-bg-secondary)',
+      'almost-primary': 'var(--color-bg-almost-primary)',
+      light: 'var(--color-bg-light)',
+      hover: 'var(--color-bg-hover)',
+      shadow: 'var(--color-bg-shadow)',
+      'light-bar': 'var(--color-bg-light-bar)',
+      'shadow-heavy': 'var(--color-bg-shadow-heavy)',
+    },
+    fontFamily: {
+      display: 'var(--font-display)',
+      body: 'var(--font-body)',
+    },
+    fontWeights: {
+      normal: 'var(--font-weight-normal)',
+      display: 'var(--font-weight-display)',
+      btn: 'var(--font-weight-btn)',
+    },
+    borderRadius: {
+      none: '0',
+      btn: 'var(--rounded-btn)',
+    },
+    inset: {
+      20: '20px',
+    },
+    borderColor: (theme) => ({
+      ...theme('colors'),
+      primary: 'var(--color-border-primary)',
+      secondary: 'var(--color-border-secondary)',
+    }),
   },
+  variants: {},
+  plugins: [],
 };
