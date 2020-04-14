@@ -10,7 +10,7 @@ const SwitchThemeButton = () => {
   return (
     <button
       type="button"
-      className="w-8 h-8 p-2 top-20 right-20 bg-secondary text-secondary rounded-btn sticky z10 float-right border border-light hover:text-accent duration-200 transition-colors"
+      className="w-12 h-12 p-2 bg-secondary text-secondary rounded-full border border-medium hover:text-accent duration-200 transition-colors"
       onClick={toggleTheme}
     >
       <FontAwesomeIcon icon={!isDarkMode ? faMoon : faSun} />

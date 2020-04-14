@@ -1,23 +1,23 @@
 import React from 'react';
-import { Image } from 'react-datocms';
 import cn from 'classnames';
+import { Image } from 'react-datocms';
 import Link from 'next/link';
 
-export default function CoverImage({ title, responsiveImage, slug }) {
+const CoverImage = ({
+  title, responsiveImage, slug, className,
+}) => {
   const image = (
     <Image
       data={{
         ...responsiveImage,
         alt: `Cover Image for ${title}`,
       }}
-      className={cn('shadow-small', {
-        'hover:shadow-medium transition-shadow duration-200': slug,
-      })}
+      className={cn('rounded-md rounded-light border border-light overflow-hidden', className)}
     />
   );
 
   return (
-    <div className="-mx-5 sm:mx-0">
+    <div className="sm:mx-0 text-0px">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a aria-label={title}>{image}</a>
@@ -27,4 +27,6 @@ export default function CoverImage({ title, responsiveImage, slug }) {
       )}
     </div>
   );
-}
+};
+
+export default CoverImage;

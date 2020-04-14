@@ -1,6 +1,5 @@
 module.exports = {
   theme: {
-    colors: {},
     textColor: {
       primary: 'var(--color-text-primary)',
       secondary: 'var(--color-text-secondary)',
@@ -18,10 +17,19 @@ module.exports = {
       secondary: 'var(--color-bg-secondary)',
       'almost-primary': 'var(--color-bg-almost-primary)',
       light: 'var(--color-bg-light)',
+      'light-bar': 'var(--color-bg-light-bar)',
       hover: 'var(--color-bg-hover)',
       shadow: 'var(--color-bg-shadow)',
-      'light-bar': 'var(--color-bg-light-bar)',
       'shadow-heavy': 'var(--color-bg-shadow-heavy)',
+      accent: 'var(--color-bg-accent)',
+      'accent-soft': 'var(--color-bg-accent-soft)',
+      'accent-light': 'var(--color-bg-accent-light)',
+      'inline-code': 'var(--color-bg-inline-code)',
+      tab: 'var(--color-bg-tab)',
+      'tab-accent': 'var(--color-bg-tab-accent)',
+      'tab-hover': 'var(--color-bg-tab-hover)',
+      header: 'var(--color-bg-header)',
+      'nav-bar': 'var(--color-bg-nav-bar)',
     },
     fontFamily: {
       display: 'var(--font-display)',
@@ -32,18 +40,34 @@ module.exports = {
       display: 'var(--font-weight-display)',
       btn: 'var(--font-weight-btn)',
     },
-    borderRadius: {
-      none: '0',
-      btn: 'var(--rounded-btn)',
+    borderColor: {
+      light: 'var(--color-border-light)',
+      medium: 'var(--color-border-medium)',
+      heavy: 'var(--color-border-heavy)',
     },
-    inset: {
-      20: '20px',
+    extend: {
+      fontSize: {
+        '0px': '0px',
+      },
+      gap: {
+        '200px': '200px',
+      },
+      inset: {
+        0: 0,
+        '20px': '20px',
+        '-12': '-3rem',
+        12: '3rem',
+        '-20': '-5rem',
+        20: '5rem',
+      },
+      boxShadow: {
+        'accent-md': 'var(--shadow-accent-md)',
+        'accent-xl': 'var(--shadow-accent-xl)',
+      },
+      scale: {
+        102: '1.02',
+      },
     },
-    borderColor: (theme) => ({
-      ...theme('colors'),
-      primary: 'var(--color-border-primary)',
-      secondary: 'var(--color-border-secondary)',
-    }),
   },
   variants: {},
   plugins: [],
