@@ -63,7 +63,7 @@ const Post = ({ post, morePosts, preview }) => {
   );
 };
 
-export const getStaticProps = async ({ params, preview }) => {
+export const getStaticProps = async ({ params, preview = null }) => {
   const data = await getPostAndMorePosts(params.slug, preview);
   const content = await markdownToHtml(data?.post?.content || '');
 
