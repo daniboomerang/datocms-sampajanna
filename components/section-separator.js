@@ -1,5 +1,5 @@
 import React from 'react';
 
-const SectionSeparator = () => <hr className="border-accent-2 mt-28 mb-24" />;
+const SectionSeparator = () => <hr className="mt-12 mb-12" />;
 
 export default SectionSeparator;

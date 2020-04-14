@@ -1,36 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import cn from 'classnames';
 import Link from 'next/link';
-import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';
+import Tags from './tags';
 
 const PostPreview = ({
   title,
   coverImage,
   date,
   excerpt,
-  author,
   slug,
-}) => (
-  <div>
-    <div className="mb-5">
+  tags,
+}) => {
+  const [isHovered, setHovered] = useState(false);
+  const handleMouseEnter = () => setHovered(true);
+  const handleMouseLeave = () => setHovered(false);
+
+  return (
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={cn('max-w-screen-sm rounded-md rounded-light transition duration-200 ease-in-out transform hover:scale-102')}>
       <CoverImage
         slug={slug}
         title={title}
         responsiveImage={coverImage.responsiveImage}
+        className={cn({ 'shadow-accent-xl': isHovered })}
       />
+      <div className="relative">
+        <div className={cn('-my-12 border border-light text-center w-11/12 p-2 rounded m-auto bg-accent-light text-secondary', { 'shadow-accent-md': isHovered })}>
+          <h3 className="text-shadow-xl text-2xl lg:text-4xl leading-tight mb-2 md:mb-4">
+            <Link as={`/posts/${slug}`} href="/posts/[slug]">
+              <a className="text-accent hover:text-accent-soft duration-200 transition-colors">
+                {title}
+              </a>
+            </Link>
+          </h3>
+          <div className="mb-2 md:mb-4 text-base">
+            <Date dateString={date} />
+            <Tags tags={tags} />
+          </div>
+          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+        </div>
+      </div>
     </div>
-    <h3 className="text-3xl mb-3 leading-snug">
-      <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <a className="text-accent hover:text-accent-soft duration-200 transition-colors">{title}</a>
-      </Link>
-    </h3>
-    <div className="text-lg mb-4">
-      <Date dateString={date} />
-    </div>
-    <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-    <Avatar name={author.name} picture={author.picture} />
-  </div>
-);
+  );
+};
 
 export default PostPreview;

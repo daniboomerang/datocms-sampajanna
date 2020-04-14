@@ -1,13 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 
 const Header = () => (
-  <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-    <Link href="/">
-      <a className="text-accent hover:text-accent-soft duration-200 transition-colors">Blog</a>
-    </Link>
-    .
-  </h2>
+  <div className="h-48 flex justify-center">
+    <div className="bg-cover bg-no-repeat bg-center" style={{ backgroundImage: 'url(/assets/images/impermanence.gif)', width: '400px' }} />
+  </div>
 );
 
 export default Header;
