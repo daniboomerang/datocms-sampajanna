@@ -23,7 +23,7 @@ const Layout = ({ preview, postTitle, children }) => {
           {children}
         </main>
       </div>
-      <Footer />
+      <Footer isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
     </div>
   );
 };

@@ -44,6 +44,7 @@ module.exports = {
       light: 'var(--color-border-light)',
       medium: 'var(--color-border-medium)',
       heavy: 'var(--color-border-heavy)',
+      accent: 'var(--color-border-accent)',
     },
     extend: {
       fontSize: {
