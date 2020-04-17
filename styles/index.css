@@ -53,6 +53,7 @@ button:focus {
   --color-border-light: #1d1626;
   --color-border-medium: hsla(0,0%,100%,0.2);
   --color-border-heavy: hsla(0,0%,100%,0.4);
+  --color-border-accent: #da3654;
 
   --font-display: IndieFlower;
   --font-body: IndieFlower;
@@ -99,6 +100,7 @@ button:focus {
   --color-border-light: rgba(59,72,86,0.09);
   --color-border-medium: #e2ebf0;
   --color-border-heavy: rgba(59,72,86,0.4);
+  --color-border-accent: #da3654;
 
   --font-display: IndieFlower;
   --font-body: IndieFlower;

@@ -19,7 +19,8 @@
         "specialLink": ["hrefLeft", "hrefRight"],
         "aspects": ["invalidHref", "preferButton"]
       }
-    ]
+    ],
+    "import/prefer-default-export": ["off"]
   },
   "globals": {
     "fetch": false
